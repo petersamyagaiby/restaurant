@@ -53,7 +53,7 @@
             {{-- <br> --}}
             <a href="{{ route('book-table') }}" class="my-1"><button type="submit" class="btn">Book A Table</button></a>
             {{-- <br> --}}
-            <a href="{{ route('profile.mybooking') }}" class="my-1 mb-3"><button type="submit" class="btn">Last Bookings</button></a>
+            <a href="{{ route('profile.mybooking') }}" class="my-1 mb-3"><button type="submit" class="btn">My Bookings</button></a>
             {{-- <br> --}}
 
        

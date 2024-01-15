@@ -5,7 +5,6 @@
 @endsection
 
 @section('basic-section')
-
 <section class="container booking py-3">
     <div class="hero-container">
         <div class="booking-header text-center pb-5">
@@ -35,11 +34,11 @@
                                 <td>{{ $booking->phone }}</td>
                                 <td>{{ $booking->total_person }}</td>
                                 <td>
-                                    @if($booking->status === 0)
+                                    @if($booking->status->value == 0)
                                         Pending
-                                    @elseif($booking->status === 1)
+                                    @elseif($booking->status->value == 1)
                                         Approved
-                                    @elseif($booking->status === 2)
+                                    @elseif($booking->status->value == 2)
                                         Declined
                                     @endif
                                 </td>
