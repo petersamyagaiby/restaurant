@@ -34,13 +34,13 @@ Route::get('/menu', [MenuController::class, 'index'])->name('menu');
 
 Route::get('/book-table', [HomeController::class, 'booking'])->name('book-table')->middleware('auth');
 
-Route::post('/book-table', [UserController::class, 'bookTable'])->name('book-table')->middleware('auth');
-
 Route::get('/profile', [UserController::class, "profile"])->name('profile')->middleware('auth');
 
 Route::get('/profile/{id}/edit', [UserController::class, "edit"])->name('profile.edit')->middleware('auth');
 
 Route::put('/profile/{id}', [UserController::class, "update"])->name('profile.update')->middleware('auth');
+
+Route::post('/book-table', [UserController::class, 'bookTable'])->name('book-table')->middleware('auth');
 
 Route::get('/mybooking', [UserController::class, "myBookings"])->name('profile.mybooking')->middleware('auth');
 

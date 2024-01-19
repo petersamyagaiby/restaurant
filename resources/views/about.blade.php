@@ -7,10 +7,10 @@
 @section('basic-section')
 	<nav class="navbar nav2">
 		<div class="container mt-2">
-			<div class="col-3">
+			<div class="col-2">
 				<a href="{{ route('home') }}"><img src="{{ asset('assets/images/Logo.png') }}" alt="" /></a>
 			</div>
-			<div class="col-5">
+			<div class="col-6">
 				<div class="d-flex">
 					<a href="{{ route('home') }}" class="mx-3 py-1 px-2">Home</a>
 					<a href="{{ route('about') }}" class="mx-3 py-1 px-2 current">About</a>
