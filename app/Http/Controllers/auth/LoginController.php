@@ -21,6 +21,9 @@ class LoginController extends Controller
         $data = $request->all();
         $cred = Auth::attempt(['email' => $data['email'], 'password' => $data['password']]);
         if ($cred) {
+            if(Auth::user() && Auth::user()->is_admin){
+                return redirect('/admin');
+            }
             return redirect()->route('profile');
         }
         
