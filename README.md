@@ -1,16 +1,16 @@
-Welcome to my Restaurant project.
+Welcome to my Restaurant System!
 
-Here's some notes from you:-
+Here's some notes for you:
 
-1- You can use the database in files or While migrate use seeds to login with an admin email:
+1- You can use the database in restaurant.sql or migrate using seeds to login with an admin email:
 
     Email: admin@example.com
     password: password
- 
-2- Menu Page take items from database.
 
-3- Admin Panel is created with "Filament Package" and you must be logged in with an admin email to open the Dashboard.
+2- Menu Page take items from the database.
 
-4- Admin users always redirected to admin panel automatically.
+3- Users are always redirected to Home Page
 
-5- Admin Panel link : http://127.0.0.1:8000/admin.
+4- Admins are always redirected to admin panel.
+
+5- Admin Panel is created with "Filament Package" and you must be logged in with an admin email to open the Dashboard.

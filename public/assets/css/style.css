@@ -277,7 +277,7 @@ footer a {
     z-index: 1;
 }
 
-.book-card button {
+.log-btn {
     background-color: #ad343e;
     color: #ffffff;
     width: 100%;
@@ -285,7 +285,7 @@ footer a {
     height: 50px;
 }
 
-.book-card button:hover {
+.log-btn:hover {
     background-color: #8d252e;
     color: #ffffff;
 }
@@ -431,7 +431,7 @@ footer a {
     height: 50px;
 }
 
-.login-card button {
+.log-btn {
     background-color: #ad343e;
     color: #ffffff;
     width: 100%;
@@ -439,7 +439,18 @@ footer a {
     height: 50px;
 }
 
-.login-card button:hover {
+.reg-btn {
+    background-color: transparent;
+    color: #ad343e;
+    font-weight: bold;
+}
+
+.reg-btn:hover {
+    /* background-color: #8d252e; */
+    color: #8d252e;
+}
+
+.log-btn:hover {
     background-color: #8d252e;
     color: #ffffff;
 }

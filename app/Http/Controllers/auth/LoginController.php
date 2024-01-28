@@ -10,7 +10,7 @@ class LoginController extends Controller
 {
     public function login()
     {
-        if(Auth::user()){
+        if (Auth::user()) {
             return redirect('/');
         }
         return view('auth.login');
@@ -21,15 +21,14 @@ class LoginController extends Controller
         $data = $request->all();
         $cred = Auth::attempt(['email' => $data['email'], 'password' => $data['password']]);
         if ($cred) {
-            if(Auth::user() && Auth::user()->is_admin){
+            if (Auth::user() && Auth::user()->is_admin) {
                 return redirect('/admin');
             }
-            return redirect()->route('profile');
+            return redirect()->route('home');
         }
-        
+
         return back()
             // ->withInput($request->only('email'))
             ->with('error', 'Invalid credentials. Please try again.');
     }
-
-} 
+}
