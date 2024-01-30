@@ -20,7 +20,7 @@ use App\Models\User;
 |
 */
 
-Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/', [HomeController::class, 'home'])->name('homePage');
 
 Route::get('/home', [HomeController::class, 'home'])->name('home');
 
@@ -46,7 +46,7 @@ Route::get('/mybooking', [UserController::class, "myBookings"])->name('profile.m
 
 // Authentication
 
-Route::get('/register' , [RegisterController::class, "register"])->name('register');
+Route::get('/register', [RegisterController::class, "register"])->name('register');
 
 Route::post('/register', [RegisterController::class, "handle_register"])->name('register');
 

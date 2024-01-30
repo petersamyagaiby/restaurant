@@ -8,11 +8,11 @@
     <nav class="navbar nav2">
         <div class="container mt-2">
             <div class="col-2">
-                <a href="{{ route('home') }}"><img src="{{ asset('assets/images/Logo.png') }}" alt="" /></a>
+                <a href="{{ route('homePage') }}"><img src="{{ asset('assets/images/Logo.png') }}" alt="" /></a>
             </div>
             <div class="col-6">
                 <div class="d-flex">
-                    <a href="{{ route('home') }}" class="mx-3 py-1 px-2">Home</a>
+                    <a href="{{ route('homePage') }}" class="mx-3 py-1 px-2">Home</a>
                     <a href="{{ route('about') }}" class="mx-3 py-1 px-2">About</a>
                     <a href="{{ route('menu') }}" class="mx-3 py-1 px-2">Menu</a>
                     <a href="{{ route('pages') }}" class="mx-3 py-1 px-2">Pages</a>
@@ -43,22 +43,26 @@
             <p>to continue to Bistro Bliss</p>
         </div>
         <div class="login-card container mb-5">
-            <form class="p-4" method="POST" action="{{ route('login') }}">
-                @csrf
-                <div class="mb-3">
-                    <label class="form-label">Email</label>
-                    <input type="text" class="form-control" placeholder="Enter your email" name="email" />
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Password</label>
-                    <input type="password" class="form-control" placeholder="*******" name="password" />
-                </div>
-                <button type="submit" class="btn log-btn">Login</button>
-                <div class="d-flex justify-content-center align-items-center">
-                    <label for="">Not A User ?</label>
-                    <button type="submit" class="btn reg-btn text-center">Register</button>
-                </div>
-            </form>
+            <div class="p-4">
+                <form class="pb-3" method="POST" action="{{ route('login') }}">
+                    @csrf
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="text" class="form-control" placeholder="Enter your email" name="email" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" placeholder="*******" name="password" />
+                    </div>
+                    <button type="submit" class="btn log-btn">Login</button>
+
+                </form>
+                <form action="{{ route('register') }}">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <button type="submit" class="btn reg-btn text-center">Don't have an account? Register</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 @endsection
