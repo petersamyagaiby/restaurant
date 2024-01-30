@@ -29,6 +29,12 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->profile()
+            ->userMenuItems([
+                MenuItem::make()
+                    ->label('Bistro Bliss')
+                    ->icon('heroicon-o-cog-6-tooth')
+                    ->url('/')
+            ])
             ->colors([
                 'primary' => Color::Amber,
             ])
